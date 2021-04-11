@@ -1,0 +1,9 @@
+{
+    "editor.snippetSuggestions": "bottom",
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "cSpell.words": [
+        "isupper",
+        "mydict"
+    ],
+    "python.pythonPath": "D:\\DProgramFiles\\Anaconda\\python.exe"
+}
