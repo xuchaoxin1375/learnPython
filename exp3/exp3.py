@@ -4,7 +4,7 @@ Version: 2.0
 Author: xuchaoxin
 Date: 2021-04-07 09:47:22
 LastEditors: xuchaoxin
-LastEditTime: 2021-04-08 18:23:00
+LastEditTime: 2021-04-13 09:40:32
 '''
 
 import time
@@ -408,9 +408,9 @@ def print_result(word_list):
             print(frequency,end="")
         print()
         
-word_list=["中国","美国","科技","芯片"]
-move_news()
-obj_list=pickle_deal()
-"get the function from pickled file"
-wordcount=obj_list[0]
-print_result(word_list)
+# word_list=["中国","美国","科技","芯片"]
+# move_news()
+# obj_list=pickle_deal()
+# "get the function from pickled file"
+# wordcount=obj_list[0]
+# print_result(word_list)
