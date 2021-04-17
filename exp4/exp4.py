@@ -4,7 +4,7 @@ Version: 2.0
 Author: xuchaoxin
 Date: 2021-04-14 08:08:56
 LastEditors: xuchaoxin
-LastEditTime: 2021-04-14 15:06:51
+LastEditTime: 2021-04-14 22:41:34
 '''
 # import time
 
@@ -92,22 +92,60 @@ path_string_fix = "D:/OneDrive - pop.zjgsu.edu.cn/PythonPath/exp4/"
 # print("list_info.merge_list([\"test merge\"]):",list_info.merge_list(["test merge"]))
 # print("list_info.del_lastone() element deleted:",list_info.del_lastone())
         
-""" 7 """
-class Human():
-    def __init__(self,name,age):
-        self.name = name
-        self.age = age
-    def get_name(self):
-        print(self.name)
-    def do_homework(self):
-        print("there is no homework from the parent!")
-class student(Human):
-    def __init__(self,name,age,homework):
-        Human.__init__(self,name,age)
-        self.homework = homework
-    def do_homework(self):
-        print("作业为："+self.homework)
+"10"
+import numpy as np
+from numpy import random 
+import itertools
+class HDPoints():
+    def __init__(self,HDPoints_list):
+        self.points =HDPoints_list
+    def centerpoint(self):
+        ndarray=np.array(self.points)
+        return sum(ndarray)/len(ndarray)
+    
+    def minkowski(self,x,y,p):
+        abs_list= [abs(x-y)**p for x,y in zip(x,y)]
+        return sum(abs_list)**(1/p)
+
+    def farthestpoint(self,p):
+        centerpoint=self.centerpoint()
+        distances_list=[self.minkowski(centerpoint,point,p) for point in self.points ]
+        max_distance= max(distances_list)
+        return  distances_list.index(max_distance),max_distance
+    def farthest2points(self,p):
+        points_index_tuple_list=[(point,i)for i,point in enumerate(self.points)]
+        point_pairs_tuples=(itertools.combinations(points_index_tuple_list,r=2))
+            #element shape:(([point_list1],index2),([point_list2],index2))
+            
+        distances_list=[(self.minkowski(tuple[0][0],tuple[1][0],p),(tuple[0][1],tuple[1][1])) for tuple in point_pairs_tuples ]
+            #element shape:(minkowski_distance,(index1,index2))
+        max_distance_point=max(distances_list,key=lambda tuple:tuple[0])
+        return max_distance_point[1],max_distance_point[0]
+
         
-stu=Stud
+        
 
+# a=random.rand(1,0.5,2,3,6,3)
+a=random.uniform(0,1,5).tolist()
+""" get points list: """
+points=[random.uniform(0,1,5).tolist() for i in range(50)]
+hd_Points=HDPoints(points)
+p=random.randint(1,6)
+print("the centerpoint is:",hd_Points.centerpoint())
+""" the minkowski method will be test contained in the farthestpoint() method! """
+print("the farthest point:",hd_Points.farthestpoint(p))
+print(f"the farthest2point: index of the 2 pointes: {hd_Points.farthest2points(p)[0]},the max minkowski distance is {hd_Points.farthest2points(p)[1]}")
 
+# print(hd_points_list)
+""" use numpy to deal it """
+# ndarray=np.array(points)
+""" get combinations by pairwisely: """
+# point_pairs_list=itertools.combinations(points,r=2)
+# distances_list_iterator=[minkowski(x,y,0) for x in ]
+
+# points_index_tuple_list=[(point,i)for i,point in enumerate(points)]
+# print(points_index_tuple_list)
+# for tuple in point_pairs_list:
+#     print(tuple)
+# print(sum(ndarray)/len(ndarray))
+# hd_points = HDPoints(hd_points_list)
