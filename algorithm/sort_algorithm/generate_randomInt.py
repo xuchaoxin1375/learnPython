@@ -18,4 +18,7 @@ def generate(n=50):
     return arr
     
 #   printSome(arr,str="原始序列")
+if __name__=="__main__":
+    # print(generate(100))
+    printSome(generate(50))
 

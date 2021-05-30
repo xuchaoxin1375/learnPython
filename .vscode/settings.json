@@ -7,5 +7,6 @@
         "minkowski",
         "ndarray"
     ],
-    "python.condaPath": "D:\\DProgramFiles\\Anaconda\\Scripts"
+    "python.condaPath": "D:\\DProgramFiles\\Anaconda\\Scripts",
+    "java.format.settings.url": "eclipse-formatter.xml"
 }
