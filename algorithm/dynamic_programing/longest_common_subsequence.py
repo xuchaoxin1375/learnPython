@@ -49,6 +49,7 @@ def get_lcs_tables(x, y):
                 b[i-1][j-1] = "left"
     return c[m][n], b
 
+
 def length_table_lcs(x, y):
     """return the table  of the length information of subsequences(processing) of sequence x and y 
 
@@ -85,8 +86,8 @@ def length_table_lcs(x, y):
     return c
 
 
-
 ''' the first invoke of the print_lcs_by_mark is :print_lcs_by_mark(b,x,b_row_index_max,b_col_index_max)'''
+
 
 def print_lcs_by_mark(b, x, i, j):
     """[summary]
@@ -101,43 +102,45 @@ def print_lcs_by_mark(b, x, i, j):
         return
     if b[i][j] == "diagonal":
         print_lcs_by_mark(b, x, i-1, j-1)
-        print(x[i],end=" ")
+        print(x[i], end=" ")
     elif b[i][j] == "up":
         print_lcs_by_mark(b, x, i-1, j)
     else:
         print_lcs_by_mark(b, x, i, j-1)
 
-def print_lcs_single(c,x,y,i,j):
+
+def print_lcs_single(c, x, y, i, j):
     # ''' without the table c,the sequence may not be a longest one ! '''
     # ''' initailly invoke is print_lcs_single(c,x,len(c),len(c[0])) '''
-    #index variable i,j is primaryly to visit the table c:
-    string=""
-    while(i>0 and j>0):
+    # index variable i,j is primaryly to visit the table c:
+    string = ""
+    while(i > 0 and j > 0):
         # for j in range(1, j+1):
-        while(i>0 and j>0):
+        while(i > 0 and j > 0):
             #     ''' debug :index out of range '''
             # # print('x[i]=',x[i],'i=',i,"y[j]=",y[j],"j=",j)
 
             # # ''' traverse the x,y sequence index_x=0,...,m-1,so make a offset:-1'''
-            if x[i-1]==y[j-1]:
+            if x[i-1] == y[j-1]:
                 # c[i][j] = c[i-1][j-1]+1
                 # print(x[i-1])
-                string+=x[i-1]
-                i-=1
-                j-=1
+                string += x[i-1]
+                i -= 1
+                j -= 1
             else:
                 # i-=1
                 if c[i-1][j] >= c[i][j-1]:
-                    i-=1
+                    i -= 1
                 else:
-                    j-=1
+                    j -= 1
     # print("over!")
-    print (string[::-1])
-    
-def get_lcs(c,x,y,i,j,lcs_sequences_set,cs=""):
+    print(string[::-1])
+
+
+def get_lcs(c, x, y, i, j, lcs_sequences_set, cs=""):
     # ''' without the table c,the sequence may not be a longest one ! '''
     # ''' initailly invoke is print_lcs_single(c,x,len(c),len(c[0])) '''
-    #index variable i,j is primaryly to visit the table c:
+    # index variable i,j is primaryly to visit the table c:
     """get all largest common subsequnces without repeating
 
     Args:
@@ -148,41 +151,42 @@ def get_lcs(c,x,y,i,j,lcs_sequences_set,cs=""):
         j (int): size of the table's column
         lcs_sequences_set (str): contain all lcs
         cs (str, optional): accumulate the common subsequence before recursively invoke the function. Defaults to ""(empty string).
-    """    
-    while(i>0 and j>0):
+    """
+    while(i > 0 and j > 0):
         # for j in range(1, j+1):
-        while(i>0 and j>0):
+        while(i > 0 and j > 0):
             #     ''' debug :index out of range '''
             # # print('x[i]=',x[i],'i=',i,"y[j]=",y[j],"j=",j)
 
             # # ''' traverse the x,y sequence index_x=0,...,m-1,so make a offset:-1'''
-            if x[i-1]==y[j-1]:
+            if x[i-1] == y[j-1]:
                 # c[i][j] = c[i-1][j-1]+1
                 # print(x[i-1])
-                cs+=x[i-1]
+                cs += x[i-1]
                 # print(x[i-1],end=" ")
-                i-=1
-                j-=1
+                i -= 1
+                j -= 1
             else:
                 # i-=1
                 ''' there will hit one case following: '''
                 if c[i-1][j] > c[i][j-1]:
-                    i-=1
-                elif c[i-1][j]==c[i][j]:
+                    i -= 1
+                elif c[i-1][j] == c[i][j]:
                     # pass
-                    get_lcs(c,x,y,i,j-1,lcs_sequences_set,cs)
-                    get_lcs(c,x,y,i-1,j,lcs_sequences_set,cs)
+                    get_lcs(c, x, y, i, j-1, lcs_sequences_set, cs)
+                    get_lcs(c, x, y, i-1, j, lcs_sequences_set, cs)
                     # i=i-1
                     # j=j-1
                     # return cs[::-1]
                     return
                 else:
-                    j-=1
-    # print(cs[::-1]) 
+                    j -= 1
+    # print(cs[::-1])
     lcs_sequences_set.add(cs[::-1])
     # print("over!")
     # print (string[::-1])
     # return cs[::-1]
+
 
 # x=['a', 'b', 'c', 'b', 'd', 'a', 'b']
 # y=['b', 'd', 'c', 'a', 'b', 'a']
@@ -193,27 +197,37 @@ y = "bdcaba"
 ''' data2: '''
 # x="_12_34_5"
 # y="_1_2545_"
+''' test data 3: 
+输入：两个字符串为 X={A, B, C, B, D, A, B}和Y={B, D, C, A, B, A}
+输出结果：
+'''
+X="ABCBADA"
+Y="BDCABA"
+
+
 
 def version1_0():
-    c=length_table_lcs(x, y)
-    print_lcs_single(c,x,y,len(x),len(y))
-        # print(get_lcs_tables(x,y))
-        # tuple=length_table_lcs(x,y)
-        # print(tuple[0])
-        # b=tuple[1]
-        # print_lcs_single(b,x)
-
+    c = length_table_lcs(x, y)
+    print_lcs_single(c, x, y, len(x), len(y))
+    # print(get_lcs_tables(x,y))
+    # tuple=length_table_lcs(x,y)
+    # print(tuple[0])
+    # b=tuple[1]
+    # print_lcs_single(b,x)
 
 
 # b = get_lcs_tables(x, y)[1]
 # print_lcs(b, x, len(b)-1, len(b[0])-1)
 ''' invoke version 1.5 '''
-def version1_5():
-    ltl=length_table_lcs(x, y)
-    print("lcs=",ltl[len(x)][len(y)],sep="")
-    lcs_sequences_set=set()
-    get_lcs(ltl,x,y,len(x),len(y),lcs_sequences_set)
+
+
+def version1_5(x,y):
+    ltl = length_table_lcs(x, y)
+    print("lcs=", ltl[len(x)][len(y)], sep="")
+    lcs_sequences_set = set()
+    get_lcs(ltl, x, y, len(x), len(y), lcs_sequences_set)
     print(lcs_sequences_set)
 
+
 # version1_0()
-version1_5()
+version1_5(X,Y)

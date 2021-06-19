@@ -1,6 +1,6 @@
 import sys
 
-from PySide2.QtCore import Qt
+from PySide2.QtCore import QTimer,QTime,SIGNAL
 from PySide2.QtWidgets import QVBoxLayout  # <2>
 from PySide2.QtWidgets import QWidget  # <1>
 from PySide2.QtWidgets import (
@@ -50,6 +50,7 @@ class MainWindow(QMainWindow):
             QSlider,
             QSpinBox,
             QTimeEdit,
+            # QTimer
         ]
 
         for w in widgets:

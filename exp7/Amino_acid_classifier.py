@@ -2,13 +2,13 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.naive_bayes import GaussianNB
 import numpy as np
 
-
-def get_percents(protein):
+''' 本程序采用python3的注解,标记出变量/函数的类型,提高可读性 '''
+def get_percents(protein)->list:
     ''' according the protein to calculate the percentes: '''
-    aa20 = ('A', 'R', 'N', 'D', 'C', 'Q', 'E', 'G', 'H', 'I',
+    aa20:tuple = ('A', 'R', 'N', 'D', 'C', 'Q', 'E', 'G', 'H', 'I',
             'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V')
     result_list = []
-    protein_len = len(protein)
+    protein_len:int = len(protein)
     for amino in aa20:
         # print(amino,end=" ")
         # dict={amino:protein.count(amino)/protein_len}
@@ -17,11 +17,13 @@ def get_percents(protein):
     return result_list
 
 
-def get_protein_sequences1(file):
+def get_protein_sequences1(file:str)->list[str]:
     ''' get protein sequences from file '''
     sequences = []
     with open(file, "r") as file_input_stream:
+        # 从文件中读取蛋白质序列
         for line in file_input_stream:
+            # 每次读取一行(str)
             line = line.split(" ")
             sequences.append(line[2].strip())
     return sequences
@@ -116,7 +118,7 @@ def estimate_accuracy(x_array,y_array,sample_num=1500):
     estimate_result=clf.predict(estimate_accuracy_x_test)
     # calculate the accuracy:
     ''' the GNB will be expecting has the 80% accuracy or so: '''
-    len=len(estimate_result)
+    length=len(estimate_result)
     count=0
     for label1,label2 in zip(estimate_result,real_result):
         if label1==label2:
@@ -125,7 +127,7 @@ def estimate_accuracy(x_array,y_array,sample_num=1500):
             # print(label1," ",label2)
             pass
     # print the len to certain the result is calculate the proper case:
-    print(count/len,len,"elements were predicted")
+    print(count/length,length,"elements were predicted")
     
 
 # print(len(x_array), len(y_array))

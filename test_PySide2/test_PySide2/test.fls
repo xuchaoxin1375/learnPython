@@ -1,0 +1,46 @@
+PWD d:/OneDrive - pop.zjgsu.edu.cn/PythonPath/test_PySide2/test_PySide2
+INPUT d:/DProgramFiles/texlive/2021/texmf.cnf
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/web2c/texmf.cnf
+INPUT d:/DProgramFiles/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT d:/OneDrive - pop.zjgsu.edu.cn/PythonPath/test_PySide2/test_PySide2/test.tex
+OUTPUT d:/OneDrive - pop.zjgsu.edu.cn/PythonPath/test_PySide2/test_PySide2/test.log
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/tex/latex/base/article.cls
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/tex/latex/base/article.cls
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/tex/latex/base/article.cls
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/tex/latex/base/article.cls
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/tex/latex/base/article.cls
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/tex/latex/base/article.cls
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/tex/latex/base/article.cls
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/tex/latex/base/article.cls
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/tex/latex/base/article.cls
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/tex/latex/base/article.cls
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/tex/latex/base/article.cls
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/tex/latex/base/size10.clo
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/tex/latex/base/size10.clo
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/tex/latex/base/size10.clo
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/tex/latex/base/size10.clo
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT d:/OneDrive - pop.zjgsu.edu.cn/PythonPath/test_PySide2/test_PySide2/test.aux
+INPUT d:/OneDrive - pop.zjgsu.edu.cn/PythonPath/test_PySide2/test_PySide2/test.aux
+INPUT d:/OneDrive - pop.zjgsu.edu.cn/PythonPath/test_PySide2/test_PySide2/test.aux
+OUTPUT d:/OneDrive - pop.zjgsu.edu.cn/PythonPath/test_PySide2/test_PySide2/test.aux
+OUTPUT d:/OneDrive - pop.zjgsu.edu.cn/PythonPath/test_PySide2/test_PySide2/test.pdf
+INPUT d:/DProgramFiles/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT d:/OneDrive - pop.zjgsu.edu.cn/PythonPath/test_PySide2/test_PySide2/test.aux
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT d:/DProgramFiles/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb

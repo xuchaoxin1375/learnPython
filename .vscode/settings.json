@@ -8,5 +8,8 @@
         "ndarray"
     ],
     "python.condaPath": "D:\\DProgramFiles\\Anaconda\\Scripts",
-    "java.format.settings.url": "eclipse-formatter.xml"
+    "java.format.settings.url": "eclipse-formatter.xml",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.flake8Enabled": false
 }

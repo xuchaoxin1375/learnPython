@@ -2,5 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/test_PySide2/weatherGUI" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/test_PySide2/weatherGUI/weatherGUI_bak" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/weatherGUI" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/weatherGUI/weatherGUI_bak" vcs="Git" />
   </component>
 </project>

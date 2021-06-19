@@ -1,8 +1,7 @@
 import sys
 
 from PySide2.QtGui import QPixmap
-from PySide2.QtWidgets import QApplication, QLabel, QMainWindow
-
+from PySide2.QtW idgets import QApplication, QLabel, QMainWindow
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -12,14 +11,14 @@ class MainWindow(QMainWindow):
 
         widget = QLabel("Hello")
         widget.setPixmap(QPixmap("otje.jpg"))
-        widget.setScaledContents(True)
+        widget.setScaledContents(True) dd
 
-        self.setCentralWidget(widget)
+        self.setCentralWidg et(widget)
 
 
 app = QApplication(sys.argv)
 
-window = MainWindow()
+window = MainWindow();
 window.show()
 
 app.exec_()
