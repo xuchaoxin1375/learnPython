@@ -5,7 +5,7 @@ Created on Tue Jun 11 20:52:27 2019
 """
 #sort_lambda.py
 nums = [1, 3, 2, 4]
-nums.sort()
+# nums.sort()
 print("Sorted numbers1:",nums) # [1, 2, 3, 4]
 nums.sort(reverse=True)
 print("Sorted numbers2:",nums) # [4, 3, 2, 1]
@@ -22,3 +22,5 @@ dat.sort(key=lambda pair: pair[1],reverse=True)
 print("Sorted list3:")
 print(dat)
 
+
+# %%

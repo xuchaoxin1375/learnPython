@@ -12,7 +12,8 @@
             "request": "launch",
             "program": "${file}",
             // "program": "D:\\DProgramFiles\\Anaconda\\python.exe",
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "cwd": "${fileDirname}"
         }
     ]
 }
