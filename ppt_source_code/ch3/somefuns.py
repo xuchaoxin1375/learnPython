@@ -16,7 +16,7 @@ for x in a:
 print()
 
 # %%
-
+print("test enumerate:")
 for index, element in enumerate(a):
     if(index%2):    
         print(index,element)
