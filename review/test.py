@@ -57,3 +57,6 @@ x = np.array([13, 111, 12, 15])
 x.argsort()
 # x
 # %%
+str="qweu123"
+str[::-5]#3w(逆向索引)
+print(str[::5])#q2
