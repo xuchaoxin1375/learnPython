@@ -2,7 +2,7 @@
 # re_find.py
 import re
 
-p = re.compile('\d+')
+p = re.compile(r'\d+')
 
 
 def test_findall():

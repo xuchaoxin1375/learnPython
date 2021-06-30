@@ -1,0 +1,12 @@
+# To add a new cell, type '# %%'
+# To add a new markdown cell, type '# %% [markdown]'
+# %%
+a=[1,2,3]
+a.insert(0,3)
+print(a)
+
+
+# %%
+print(a)
+
+
