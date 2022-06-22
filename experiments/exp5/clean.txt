@@ -1,0 +1,1 @@
+ Halve the size of the image: It does this by taking out every other row and every other column, thus leaving only those matrix elements whose row and column indices are even.
