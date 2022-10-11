@@ -57,3 +57,5 @@ plt.plot(values)
 # print("values:",values)
 avg=values.mean()
 print("avg:",avg)
+
+
