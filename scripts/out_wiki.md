@@ -1,0 +1,8 @@
+More than two random variables​
+Consider an indexed collection of random variables ${\displaystyle X_{1},\ldots ,X_{n}}$ taking possible values $x_{1},\dots ,x_{n}$ respectively. Then, to find the value of this member of the joint distribution, we can apply the definition of conditional probability to obtain:
+${\displaystyle \mathrm {P} \left(X_{n}=x_{n},\ldots ,X_{1}=x_{1}\right)=\mathrm {P} \left(X_{n}=x_{n}|X_{n-1}=x_{n-1},\ldots ,X_{1}=x_{1}\right)\cdot \mathrm {P} \left(X_{n-1}=x_{n-1},\ldots ,X_{1}=x_{1}\right)}$
+Repeating this process with each final term and letting $A_{k}$ denote the event ${\displaystyle X_{k}=x_{k}}$ creates the product:
+${\displaystyle \mathrm {P} \left(\bigcap _{k=1}^{n}A_{k}\right)=\prod _{k=1}^{n}\mathrm {P} \left(A_{k}\,{\Bigg |}\,\bigcap _{j=1}^{k-1}A_{j}\right)=\prod _{k=1}^{n}\mathrm {P} \left(X_{k}=x_{k}\,|\,X_{1}=x_{1},\dots X_{k-1}=x_{k-1}\right).}$
+Example​
+With four variables ($n=4$), denote ${\displaystyle P(x_{n}\,|\,x_{n-1}\dots ,x_{1}):=P(X_{n}=x_{n}\,|\,X_{n-1}=x_{n-1}\dots ,X_{1}=x_{1})}$ for brevity. Then, the chain rule produces this product of conditional probabilities:
+${\displaystyle {\begin{aligned}\mathrm {P} (x_{4},x_{3},x_{2},x_{1})&=\mathrm {P} (x_{4}\mid x_{3},x_{2},x_{1})\cdot \mathrm {P} (x_{3},x_{2},x_{1})\\&=\mathrm {P} (x_{4}\mid x_{3},x_{2},x_{1})\cdot \mathrm {P} (x_{3}\mid x_{2},x_{1})\cdot \mathrm {P} (x_{2},x_{1})\\&=\mathrm {P} (x_{4}\mid x_{3},x_{2},x_{1})\cdot \mathrm {P} (x_{3}\mid x_{2},x_{1})\cdot \mathrm {P} (x_{2}\mid x_{1})\cdot \mathrm {P} (x_{1})\end{aligned}}}$
